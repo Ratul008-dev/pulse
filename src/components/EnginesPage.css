@@ -1,0 +1,71 @@
+.engines-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.controls input,
+.controls select {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.engines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.engine-card {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 15px;
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.engine-card:hover {
+  transform: translateY(-5px);
+  
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.engine-card h2 {
+  margin-top: 0;
+  
+  text-decoration: none;
+}
+.engine-card h2:hover {
+  color: #ff0202;
+  text-decoration: underline;
+}
+
+.engine-card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .engines-page {
+    padding: 10px;
+    
+  }
+  .engines-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+   
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+}

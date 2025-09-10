@@ -1,0 +1,307 @@
+.prime {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.prime .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.prime .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.prime .list .item .content {
+    position: absolute;
+    top: 7%;
+    width: 100%;
+    max-width: 80%;
+    left: 44%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 66%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 200px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.thumbnail .item .content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+
+.thumbnail .item .content h3 {
+    font-weight: bold;
+}
+
+.thumbnail {
+    display: none;
+}
+
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    width: 300px;
+    min-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    border: none;
+    font-family: monospace;
+
+    font-weight: bold;
+    font-size: large;
+    transition: .5s;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    background-color: #eee;
+    color: #555;
+
+}
+
+.prime .list .item:nth-child(1) {
+    z-index: 1;
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.prime .list .item:nth-child(1) h3 {
+    animation-delay: 1.3s;
+
+}
+
+.prime .list .item:nth-child(1) p {
+    animation-delay: 1.6s;
+
+}
+
+.prime.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    border-radius: 20px;
+    animation: showImage 0.5s 1s linear 1 forwards;
+
+}
+
+@keyframes showImage {
+    to {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 0;
+    }
+}
+
+.prime.next .thumbnail .item:nth-last-child(1) img {
+    width: 0;
+    overflow: hidden;
+    animation: showThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes showThumbnail {
+    to {
+        width: 150px;
+    }
+}
+
+.prime.next .thumbnail {
+    transform: translateX(150px);
+    animation: transformThumbnail 0.5s linear 1 forwards;
+}
+
+@keyframes transformThumbnail {
+    to {
+        transform: translateX(0px);
+    }
+}
+
+.prime.prev .list .item:nth-child(2) {
+    z-index: 2;
+}
+
+.prime.prev .list .item:nth-child(2) img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation: outImage 0.5s linear 1 forwards;
+}
+
+@keyframes outImage {
+    to {
+        width: 150px;
+        height: 200px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+
+    }
+}
+
+.prime.prev .thumbnail .item:nth-child(1) {
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail 0.5s linear 1 forwards;
+
+}
+
+.prime.next .arrows button,
+.prime.prev .arrows button {
+    pointer-events: none;
+
+}
+
+.time {
+    width: 0%;
+    height: 5px;
+    background-color: #eee;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+.prime.next.time,
+.prime.prev.time {
+    width: 100%;
+    animation: timeRunning 5s linear 1 forwards;
+}
+
+@keyframes timeRunning {
+    to {
+        width: 0%;
+    }
+}
+
+.context {
+    padding: 10px 0px;
+}
+
+.context h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.context p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.3;
+
+}
+
+.button-area1 {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .prime {
+        height: 50vh;
+        width: 100%;
+    }
+
+    content {
+        left: 44%;
+        top: 7%;
+    }
+
+    .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .context h2 {
+        font-size: 28px;
+    }
+
+    .context p {
+        font-size: 1rem;
+    }
+
+    .thumbnail {
+        display: none;
+    }
+
+    .arrows {
+        top: 75%;
+        right: -14%;
+        width: 200px;
+        min-width: 50%;
+    }
+
+}

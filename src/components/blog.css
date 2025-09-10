@@ -1,0 +1,31 @@
+.blog {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.blogtopic h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blogtopic p {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.2;
+}
+@media screen and (max-width: 768px) {
+.blog{
+    margin-top: 0;
+    padding: 0 10px;
+}
+    
+    
+    .blogtopic h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .blogtopic p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,29 @@
+body {
+	font-family: poppins;
+	background-color: #000000;
+    color: #eee;
+    margin: 0;
+    
+    
+}
+.app{
+  overflow: hidden;
+}
+.app.light {
+  background-color: white;
+  color: black;
+}
+
+
+.app.dark {
+  background-color: #000000;
+  color: white;
+}
+
+.theme-toggle {
+  margin-left: auto;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

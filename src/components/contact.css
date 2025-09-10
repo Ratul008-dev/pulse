@@ -1,0 +1,64 @@
+.contactTopic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+.contactTopic h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.contactTopic p {
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1.2;
+}
+.contact{
+    text-align: center;
+    
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+}
+.contact form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.contact form input, .contact form textarea {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact form button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px;
+}
+.conclusion {
+    text-align: center;
+    margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .contactTopic h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .contactTopic p {
+        font-size: 1rem;
+    }
+    .contact form input, .contact form textarea, .contact form button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+    
